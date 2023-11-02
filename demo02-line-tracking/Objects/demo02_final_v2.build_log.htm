@@ -1,0 +1,182 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: £gVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Windy White, jk, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.32.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14.1
+Assembler:       Armasm.exe V6.14.1
+Linker/Locator:  ArmLink.exe V6.14.1
+Library Manager: ArmAr.exe V6.14.1
+Hex Converter:   FromElf.exe V6.14.1
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Gigi.C\program\eie3106\project\demo02_final_v2\demo02_final_v2.uvprojx
+Project File Date:  06/10/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+car.cpp(2): warning: In file included from...
+./init.h(31): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+void move(bool, unsigned int, bool, unsigned int);
+                                                  ^
+car.cpp(6): warning: no previous extern declaration for non-static variable 'delay_readyForB' [-Wmissing-variable-declarations]
+int delay_readyForB = 0;
+    ^
+car.cpp(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int delay_readyForB = 0;
+^
+car.cpp(7): warning: no previous extern declaration for non-static variable 'targetAC' [-Wmissing-variable-declarations]
+char targetAC = 20;
+     ^
+car.cpp(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char targetAC = 20;
+^
+car.cpp(8): warning: no previous extern declaration for non-static variable 'targetB' [-Wmissing-variable-declarations]
+char targetB = 32;
+     ^
+car.cpp(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char targetB = 32;
+^
+car.cpp(4): warning: In file included from...
+./car.h(40): warning: padding class 'Car' with 3 bytes to align 'p1' [-Wpadded]
+                int p1,p2, p3, p4, p5, p6, p7, p8;
+                    ^
+./car.h(45): warning: padding class 'Car' with 1 byte to align 'basicSpeedL' [-Wpadded]
+                unsigned int basicSpeedL;
+                             ^
+car.cpp(333): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        last_leftCounter = getLeft();
+                         ~ ^~~~~~~~~
+car.cpp(334): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        last_rightCounter = getRight();
+                          ~ ^~~~~~~~~~
+car.cpp(346): warning: use of old-style cast [-Wold-style-cast]
+        turn = (int) ( kp * error + kd * derivative + ki * integral); // PID control
+               ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+car.cpp(346): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+        turn = (int) ( kp * error + kd * derivative + ki * integral); // PID control
+                       ~~~~~~~~~~~^~~~~~~~~~~~~~~~~ ~
+car.cpp(346): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+        turn = (int) ( kp * error + kd * derivative + ki * integral); // PID control
+                                                         ~ ^~~~~~~~
+car.cpp(349): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                move(true, basicSpeedL + turn, true, basicSpeedR - turn) ;
+                                       ~ ^~~~
+car.cpp(349): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                move(true, basicSpeedL + turn, true, basicSpeedR - turn) ;
+                                                                 ~ ^~~~
+car.cpp(352): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                move(true, basicSpeedL - turn, true, basicSpeedR + turn) ;
+                                       ~ ^~~~
+car.cpp(352): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                move(true, basicSpeedL - turn, true, basicSpeedR + turn) ;
+                                                                 ~ ^~~~
+car.cpp(366): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+        ki = I;
+           ~ ^
+car.cpp(400): warning: result of comparison of unsigned expression < 0 is always false [-Wtautological-unsigned-zero-compare]
+        if (pwmL < 0) {
+            ~~~~ ^ ~
+car.cpp(411): warning: result of comparison of unsigned expression < 0 is always false [-Wtautological-unsigned-zero-compare]
+        if (pwmR < 0) {
+            ~~~~ ^ ~
+car.cpp(4): warning: In file included from...
+./car.h(64): warning: private field 'flag_O2I' is not used [-Wunused-private-field]
+                char flag_O2I;
+                     ^
+19 warnings generated.
+compiling car.cpp...
+linking...
+Program Size: Code=6584 RO-data=276 RW-data=24 ZI-data=1744  
+FromELF: creating hex file...
+".\Objects\demo02_final_v2.axf" - 0 Error(s), 19 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: ADC Version: 3.6.0
+   * Component: EXTI Version: 3.6.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: SPI Version: 3.6.0
+   * Component: TIM Version: 3.6.0
+   * Component: USART Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\Gigi.C\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\Gigi.C\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+  C:\Users\Gigi.C\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+
+   * Component: Keil::Device:StdPeriph Drivers:ADC:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_adc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_adc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:EXTI:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_exti.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_exti.c
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:SPI:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_spi.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_spi.c
+
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
