@@ -104,7 +104,9 @@ If the car deviates to left, the sensor will return a value of ‘01’ and the 
 In this task, with the given SR04 ultrasonic module, the MCU can get the distance between the robot car and the wall. Then, the car can move forward at different speed according to the distance. When putting the car in three specific positions, MCU can control the car to get close to the wall but not hit the wall. You can get the code from `demo03-carParking`.
 
 The flowchart for this task is shown in Figure 1.
-![image](https://github.com/wind0124003/EIE3106-project-demo01/assets/59653164/3e5a1601-0afb-4d73-b9ee-bb50abb9c0e2)
+
+![image](photo/Screenshot 2023-11-02 181118.png)
+![](photo/Screenshot 2023-11-02 181118.png)
 </br>Figure. 1: The flowchart for car parking
 
 ## Demo04 - Relay Race
