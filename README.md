@@ -15,7 +15,7 @@ Power source for robot car: Li-ion battery (18650)
 MCU for joypad: Arduino (atmega328p)
 Communication between joypad and robot car: Bluetooth module(HC05 and HC06)
 
-<img width="254" alt="image" src="https://github.com/wind0124003/EIE3106-project/assets/59653164/06b991ba-d230-4de8-a2e8-f60018cb4dda"></br>
+<img width="254" alt="image of robot car" src="./photo/robot-car.png"></br>
 This is the picture captured from Mr Lam's website:https://eie3105p2.blogspot.com/2021/02/programming-robot-car.html
 
 ## Demo01 - Robot car, remote control and ultrasonic sensor
@@ -70,7 +70,7 @@ Based on the formula `Distance = speed * time`, the ultrasonic wave speed at roo
 ## Demo02 - Line Tracking
 The task is to track the specific path.
 
-![map-task2](https://github.com/wind0124003/EIE3106-project-demo01/assets/59653164/f52a1e34-77e2-4b73-bf05-92033b3e6238)</br>
+<img width="30%" src="./photo/map-task02.png"></br>
 
 Route:
 A-> B-> C-> D-> A-> B-> Y-> D-> Y-> B-> C-> D-> A
@@ -104,15 +104,14 @@ If the car deviates to left, the sensor will return a value of ‘01’ and the 
 In this task, with the given SR04 ultrasonic module, the MCU can get the distance between the robot car and the wall. Then, the car can move forward at different speed according to the distance. When putting the car in three specific positions, MCU can control the car to get close to the wall but not hit the wall. You can get the code from `demo03-carParking`.
 
 The flowchart for this task is shown in Figure 1.
-photo/Screenshot 2023-11-02 181118.png
-![image]()
+<img width="50%" src="./photo/algorithm-car-parking.png">
 </br>Figure. 1: The flowchart for car parking
 
 ## Demo04 - Relay Race
 Car 1 (at A): A-> B-> C-> D </br>
 Car 2 (at D): D-> E-> F-> G-> H-> A-> B-> C-> D </br>
 Car 1 (at D): D-> E-> F </br>
-![map-task4](https://github.com/wind0124003/EIE3106-project-demo01/assets/59653164/9d1a5321-dfcf-4d62-a086-2c74bed1a76e)</br>
+<img width="60%" alt="map of task 4" src="./photo/map-task4.png"></br>
 
 In this task, I combined the method of “Line Tracking” and “Car parking”.
 
@@ -128,8 +127,7 @@ Demo video:
 ### Difficulty
 I found that there are some uncontrollable factors when doing this task. For example, motor damage and battery power. To solve them, I try to use PID controller to control the car speed. This is the algorithm for PID controller shown in Figure 2. This effectively improves the performance and stability of the robot car, compare with “Line tracking”. Its speed is not easily affected by battery life.
 
-![image](https://github.com/wind0124003/EIE3106-project-demo01/assets/59653164/403a6bef-84b9-4c76-8cda-67397f172e17) 
-</br>
+<img width="50%" alt="the procedure for PID controller of demo04" src="./photo/demo04-PIDController.png"></br>
 Figure2. algorithm for PID controller </br>
 
 Unlike “Line Tracking”, the robot car mainly uses the counter to determine which position it is at. Because I found that using timer cannot determine the position in particular. This can also reduce the influence of the map more effectively.
