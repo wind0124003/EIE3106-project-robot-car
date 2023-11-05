@@ -3,7 +3,7 @@ An automatic robot car project for EIE3106 student study in PolyU.</br>
 This repo contains the program code of the demo.
 
 Project date: Sem 02, 2021/2022</br>
-Upload date: 2/11/2023
+Upload date: 2/11/2023</br>
 Last update: 4/11/2023
 
 ## Introduction
