@@ -4,7 +4,7 @@ This repo contains the program code of the demo.
 
 Project date: Sem 02, 2021/2022</br>
 Upload date: 2/11/2023
-Last update: 2/11/2023
+Last update: 4/11/2023
 
 ## Introduction
 This project is an integrated hardware-software project, that covers soldering to programming. Student is required to implement the program to complete specific tasks with the given robot car autonomously. 
