@@ -104,9 +104,8 @@ If the car deviates to left, the sensor will return a value of ‘01’ and the 
 In this task, with the given SR04 ultrasonic module, the MCU can get the distance between the robot car and the wall. Then, the car can move forward at different speed according to the distance. When putting the car in three specific positions, MCU can control the car to get close to the wall but not hit the wall. You can get the code from `demo03-carParking`.
 
 The flowchart for this task is shown in Figure 1.
-
-![image](photo/Screenshot 2023-11-02 181118.png)
-![](photo/Screenshot 2023-11-02 181118.png)
+photo/Screenshot 2023-11-02 181118.png
+![image]()
 </br>Figure. 1: The flowchart for car parking
 
 ## Demo04 - Relay Race
@@ -129,7 +128,8 @@ Demo video:
 ### Difficulty
 I found that there are some uncontrollable factors when doing this task. For example, motor damage and battery power. To solve them, I try to use PID controller to control the car speed. This is the algorithm for PID controller shown in Figure 2. This effectively improves the performance and stability of the robot car, compare with “Line tracking”. Its speed is not easily affected by battery life.
 
-![image](https://github.com/wind0124003/EIE3106-project-demo01/assets/59653164/403a6bef-84b9-4c76-8cda-67397f172e17) </br>
+![image](https://github.com/wind0124003/EIE3106-project-demo01/assets/59653164/403a6bef-84b9-4c76-8cda-67397f172e17) 
+</br>
 Figure2. algorithm for PID controller </br>
 
 Unlike “Line Tracking”, the robot car mainly uses the counter to determine which position it is at. Because I found that using timer cannot determine the position in particular. This can also reduce the influence of the map more effectively.
